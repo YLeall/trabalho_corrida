@@ -1,5 +1,7 @@
 package corrida;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Veiculo {
@@ -31,7 +33,21 @@ public class Veiculo {
     }
 
     public void setDistancePlusSpeed(){
-        this.distancia = this.distancia += this.velocidade;
+        this.distancia = this.distancia + this.velocidade;
+        //this.distancia = this.distancia += this.velocidade;
+    }
+
+    public String distanceSpaceWhite(int distanciaVeiculo) {
+        List<String> distanciaVeiculo1List = new ArrayList<>();
+        
+        distanciaVeiculo1List.clear();
+        for (int i = 0; i <= distanciaVeiculo; i++) {
+            distanciaVeiculo1List.add(" ");
+        }
+
+        String spaceWhiteDistance = String.join("", distanciaVeiculo1List);
+
+        return spaceWhiteDistance;
     }
 
     
